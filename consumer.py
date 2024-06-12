@@ -8,7 +8,7 @@ from plotly.subplots import make_subplots
 st.set_page_config(page_title="Consumer Behavior Insights", layout="wide")
 
 # Load customer journey data using the full path
-data = pd.read_csv('/Users/muchirikahwai/Downloads/Pattern/customer_journey_data.csv')
+data = pd.read_csv('customer_journey_data.csv')
 
 # Define custom colors
 custom_colors = {
