@@ -5,6 +5,13 @@ import plotly.graph_objects as go
 from plotly.subplots import make_subplots
 from streamlit_option_menu import option_menu
 
+# Set page configuration
+st.set_page_config(page_title="Consumer Behavior Insights", layout="wide")
+
+# Load customer journey data using a relative path
+data = pd.read_csv('customer_journey_data.csv')
+
+
 # Initialize session state for theme selection
 if 'theme' not in st.session_state:
     st.session_state.theme = 'Light'
@@ -35,11 +42,8 @@ custom_colors_dark = {
 
 custom_colors = custom_colors_light if st.session_state.theme == 'Light' else custom_colors_dark
 
-# Load customer journey data using a relative path
-data = pd.read_csv('customer_journey_data.csv')
 
-# Set page configuration
-st.set_page_config(page_title="Consumer Behavior Insights", layout="wide")
+
 
 
 
