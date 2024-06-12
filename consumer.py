@@ -20,7 +20,7 @@ custom_colors = {
 }
 
 # App title and logo
-st.image("/Users/muchirikahwai/Downloads/Pattern/Pattern_Logo.png", width=600)
+st.image("Pattern_Logo.png", width=600)
 st.title("Consumer Behavior Insights Generator")
 
 # About This App section
