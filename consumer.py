@@ -3,12 +3,38 @@ import pandas as pd
 import plotly.express as px
 import plotly.graph_objects as go
 from plotly.subplots import make_subplots
+from streamlit_option_menu import option_menu
 
 # Set page configuration
 st.set_page_config(page_title="Consumer Behavior Insights", layout="wide")
 
 # Load customer journey data using the full path
 data = pd.read_csv('customer_journey_data.csv')
+
+# Define custom colors for light mode
+custom_colors_light = {
+    'Awareness': '#636EFA',  # Blue
+    'Consideration': '#EF553B',  # Red
+    'Decision': '#00CC96',  # Green
+    'frequent': '#636EFA',  # Blue
+    'one_time': '#AB63FA'  # Purple
+}
+
+# Define custom colors for dark mode
+custom_colors_dark = {
+    'Awareness': '#8ab4f8',  # Light Blue
+    'Consideration': '#f28b82',  # Light Red
+    'Decision': '#81c995',  # Light Green
+    'frequent': '#8ab4f8',  # Light Blue
+    'one_time': '#b39ddb'  # Light Purple
+}
+
+# Theme selector in sidebar
+st.sidebar.title("Settings")
+theme = option_menu("Theme", ["Light", "Dark"], icons=["sun", "moon"], default_index=0)
+
+# Set custom colors based on theme
+custom_colors = custom_colors_light if theme == "Light" else custom_colors_dark
 
 # Define custom colors
 custom_colors = {
