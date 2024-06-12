@@ -38,6 +38,8 @@ Welcome to the Consumer Behavior Insights Generator! This application was develo
 - **Clear Communication:** Ability to explain complex concepts in a clear and concise manner.
 - **Passion for Technology:** A strong interest in how data analytics and technology are reshaping consumer behavior and driving business growth.
 
+*Note: The data used in this application was randomized and generated for the purpose of demonstrating my data analysis skills.*
+
 ### Date Built: June 12, 2024
 """)
 
